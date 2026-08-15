@@ -316,9 +316,19 @@
         <label for="message" class="block text-sm mb-1">Tell me about you, or your childs musical level, goals, or ask any questions.</label>
         <textarea id="message" name="Message" rows="4" class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50"></textarea>
       </div>
-      <button type="submit" class="w-full bg-amber-50 text-slate-800 font-semibold px-6 py-3 hover:bg-amber-100 transition">Submit</button>
-      <p id="form-status" class="text-sm text-center hidden"></p>
+      <button type="submit" id="submit-btn" class="w-full bg-amber-50 text-slate-800 font-semibold px-6 py-3 hover:bg-amber-100 transition disabled:opacity-60">Submit</button>
+      <p id="form-error" class="text-sm text-center text-red-300 hidden"></p>
     </form>
+
+    <div id="form-success" class="hidden text-center py-6">
+      <div class="mx-auto mb-5 h-16 w-16 rounded-full bg-teal-500/15 border border-teal-400/40 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="font-display text-2xl mb-2">Thank you!</h3>
+      <p class="text-amber-50/85 max-w-sm mx-auto">Your message has been sent. Janice will personally reach out soon to help find the perfect lesson or group for you.</p>
+    </div>
   </div>
 </section>
 
@@ -356,7 +366,9 @@
   updateHeaderBg();
 
   var form = document.getElementById('contact-form');
-  var status = document.getElementById('form-status');
+  var errorMsg = document.getElementById('form-error');
+  var successPanel = document.getElementById('form-success');
+  var submitBtn = document.getElementById('submit-btn');
   function encode(data) {
     return Object.keys(data).map(function (key) {
       return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
@@ -364,6 +376,9 @@
   }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    errorMsg.classList.add('hidden');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
     var data = {};
     new FormData(form).forEach(function (value, key) { data[key] = value; });
     fetch('/', {
@@ -371,12 +386,14 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode(data)
     }).then(function () {
-      status.classList.remove('hidden');
-      status.textContent = "Thanks! Janice will be in touch soon.";
-      form.reset();
+      form.classList.add('hidden');
+      successPanel.classList.remove('hidden');
+      successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }).catch(function () {
-      status.classList.remove('hidden');
-      status.textContent = "Something went wrong — please email janicew7@gmail.com directly.";
+      errorMsg.classList.remove('hidden');
+      errorMsg.textContent = "Something went wrong — please email janicew7@gmail.com directly.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
     });
   });
 </script>
