@@ -12,55 +12,54 @@
   body { font-family: 'Nunito Sans', sans-serif; }
   .font-display { font-family: 'Playfair Display', serif; }
   html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 84px; }
 </style>
 </head>
 <body class="bg-white text-slate-800">
 
-<!-- NAV -->
-<header class="sticky top-0 z-50 bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-    <a href="#home" class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Spruce Music logo" class="h-12 w-auto" onerror="this.style.display='none'">
-      <span class="font-display text-2xl text-teal-700 leading-tight">Spruce<br class="hidden"> Music</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-8 text-slate-800 font-medium">
-      <a href="#home" class="hover:text-teal-700 underline underline-offset-4">Home</a>
-      <a href="#about" class="hover:text-teal-700">About Me</a>
-      <a href="#classes" class="hover:text-teal-700">Classes</a>
-      <a href="#how-it-works" class="hover:text-teal-700">How to Book</a>
-      <a href="#qualifications" class="hover:text-teal-700">Qualifications</a>
-      <a href="#contact" class="hover:text-teal-700">Contact</a>
-    </nav>
-    <button id="menu-btn" class="md:hidden text-slate-800" aria-label="Open menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-    </button>
-  </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 font-medium">
-    <a href="#home" class="hover:text-teal-700">Home</a>
-    <a href="#about" class="hover:text-teal-700">About Me</a>
-    <a href="#classes" class="hover:text-teal-700">Classes</a>
-    <a href="#how-it-works" class="hover:text-teal-700">How to Book</a>
-    <a href="#qualifications" class="hover:text-teal-700">Qualifications</a>
-    <a href="#contact" class="hover:text-teal-700">Contact</a>
-  </div>
-</header>
+<!-- HERO (photo fills viewport, nav overlaid on top) -->
+<section id="home" class="relative min-h-[640px] h-[92vh] md:h-screen max-h-[900px] flex flex-col">
+  <img src="images/hero-piano.jpg" alt="Close-up of hands playing piano" class="absolute inset-0 w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/1600x1000/2b3a4a/e8e0c8?text=Piano+Photo'">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
 
-<!-- HERO -->
-<section id="home" class="relative bg-slate-800">
-  <div class="grid md:grid-cols-2">
-    <div class="flex items-center bg-gradient-to-r from-slate-900 to-slate-800/60 md:bg-none order-2 md:order-1">
-      <div class="hidden md:block w-full h-full"></div>
+  <!-- NAV -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+      <a href="#home" class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Spruce Music logo" class="h-11 w-auto brightness-0 invert" onerror="this.style.display='none'">
+        <span class="font-display text-2xl text-amber-50 leading-tight">Spruce Music</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-amber-50/90 font-medium text-sm tracking-wide">
+        <a href="#home" class="hover:text-amber-50 border-b border-amber-50/80 pb-1">Home</a>
+        <a href="#about" class="hover:text-amber-50">About Me</a>
+        <a href="#classes" class="hover:text-amber-50">Classes</a>
+        <a href="#how-it-works" class="hover:text-amber-50">How to Book</a>
+        <a href="#qualifications" class="hover:text-amber-50">Qualifications</a>
+        <a href="#contact" class="hover:text-amber-50">Contact</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-block border border-amber-50/70 text-amber-50 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-amber-50 hover:text-slate-900 transition">Enroll Today</a>
+      <button id="menu-btn" class="md:hidden text-amber-50" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
     </div>
-    <div class="order-1 md:order-2">
-      <img src="images/hero-piano.jpg" alt="Close-up of hands playing piano" class="w-full h-64 md:h-[520px] object-cover object-center" onerror="this.src='https://placehold.co/1200x800/2b3a4a/e8e0c8?text=Piano+Photo'">
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-t border-white/10 px-6 py-4 flex flex-col gap-4 font-medium text-amber-50">
+      <a href="#home" class="hover:text-amber-200">Home</a>
+      <a href="#about" class="hover:text-amber-200">About Me</a>
+      <a href="#classes" class="hover:text-amber-200">Classes</a>
+      <a href="#how-it-works" class="hover:text-amber-200">How to Book</a>
+      <a href="#qualifications" class="hover:text-amber-200">Qualifications</a>
+      <a href="#contact" class="hover:text-amber-200">Contact</a>
     </div>
-  </div>
-  <div class="md:absolute md:inset-0 flex items-end md:items-end">
-    <div class="w-full bg-gradient-to-t from-slate-900 via-slate-900/95 to-transparent md:bg-slate-900/0">
-      <div class="max-w-7xl mx-auto px-6 pb-10 pt-6 md:pt-0">
-        <h1 class="font-display italic text-4xl sm:text-5xl md:text-6xl text-amber-50 max-w-3xl">Piano Lessons &amp; Music Groups in Sechelt</h1>
-        <p class="text-amber-50/90 mt-4 max-w-xl text-base sm:text-lg">Learn piano at any age! Enjoy private 1-on-1 lessons for every skill level, plus fun, interactive music groups that spark a lifelong love of music for kids.</p>
-        <a href="#contact" class="inline-block mt-6 bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Book First Free Lesson</a>
+  </header>
+
+  <!-- HERO CONTENT -->
+  <div class="relative z-10 flex-1 flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full">
+      <h1 class="font-display italic text-4xl sm:text-5xl md:text-6xl text-amber-50 max-w-2xl leading-[1.1]">Piano Lessons &amp; Music Groups in Sechelt</h1>
+      <p class="text-amber-50/90 mt-5 max-w-lg text-base sm:text-lg">Learn piano at any age! Enjoy private 1-on-1 lessons for every skill level, plus fun, interactive music groups that spark a lifelong love of music for kids.</p>
+      <div class="flex flex-wrap items-center gap-4 mt-8">
+        <a href="#contact" class="inline-block bg-amber-50 text-slate-900 font-semibold px-7 py-3.5 rounded-full hover:bg-amber-100 transition">Book First Free Lesson</a>
+        <a href="#classes" class="inline-block border border-amber-50/70 text-amber-50 font-semibold px-7 py-3.5 rounded-full hover:bg-amber-50 hover:text-slate-900 transition">View Programs</a>
       </div>
     </div>
   </div>
@@ -88,7 +87,7 @@
   </div>
   <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-8">
     <div class="bg-slate-900 text-amber-50 flex flex-col">
-      <img src="images/class-piano.jpg" alt="Janice teaching a student one-on-one at the piano" class="h-56 w-full object-cover object-[center_20%]" onerror="this.src='https://placehold.co/500x400/1e293b/e8e0c8?text=Piano+Lessons'">
+      <img src="images/class-piano.jpg" alt="Close-up of hands playing piano during a lesson" class="h-56 w-full object-cover object-center" onerror="this.src='https://placehold.co/500x400/1e293b/e8e0c8?text=Piano+Lessons'">
       <div class="p-6 flex flex-col flex-1">
         <h3 class="font-display text-2xl text-center mb-1">Piano Lessons</h3>
         <p class="text-center text-sm text-amber-50/70 mb-4">(All Ages, All Levels)</p>
@@ -344,6 +343,17 @@
   document.getElementById('menu-btn').addEventListener('click', function () {
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
+
+  var siteHeader = document.getElementById('site-header');
+  function updateHeaderBg() {
+    if (window.scrollY > 40) {
+      siteHeader.classList.add('bg-slate-900/95', 'backdrop-blur', 'shadow-lg');
+    } else {
+      siteHeader.classList.remove('bg-slate-900/95', 'backdrop-blur', 'shadow-lg');
+    }
+  }
+  window.addEventListener('scroll', updateHeaderBg);
+  updateHeaderBg();
 
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
