@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spruce Music | Piano Lessons & Music Groups in Sechelt</title>
+<meta name="description" content="Private piano lessons and interactive music groups for all ages in Sechelt, BC. First lesson free!">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Nunito Sans', sans-serif; }
+  .font-display { font-family: 'Playfair Display', serif; }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-white text-slate-800">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <a href="#home" class="flex items-center gap-2">
+      <img src="images/logo.png" alt="Spruce Music logo" class="h-12 w-auto" onerror="this.style.display='none'">
+      <span class="font-display text-2xl text-teal-700 leading-tight">Spruce<br class="hidden"> Music</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-slate-800 font-medium">
+      <a href="#home" class="hover:text-teal-700 underline underline-offset-4">Home</a>
+      <a href="#about" class="hover:text-teal-700">About Me</a>
+      <a href="#classes" class="hover:text-teal-700">Classes</a>
+      <a href="#how-it-works" class="hover:text-teal-700">How to Book</a>
+      <a href="#qualifications" class="hover:text-teal-700">Qualifications</a>
+      <a href="#contact" class="hover:text-teal-700">Contact</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden text-slate-800" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 font-medium">
+    <a href="#home" class="hover:text-teal-700">Home</a>
+    <a href="#about" class="hover:text-teal-700">About Me</a>
+    <a href="#classes" class="hover:text-teal-700">Classes</a>
+    <a href="#how-it-works" class="hover:text-teal-700">How to Book</a>
+    <a href="#qualifications" class="hover:text-teal-700">Qualifications</a>
+    <a href="#contact" class="hover:text-teal-700">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative bg-slate-800">
+  <div class="grid md:grid-cols-2">
+    <div class="flex items-center bg-gradient-to-r from-slate-900 to-slate-800/60 md:bg-none order-2 md:order-1">
+      <div class="hidden md:block w-full h-full"></div>
+    </div>
+    <div class="order-1 md:order-2">
+      <img src="images/hero-piano.jpg" alt="Child playing piano with sheet music" class="w-full h-64 md:h-[520px] object-cover" onerror="this.src='https://placehold.co/1200x800/2b3a4a/e8e0c8?text=Piano+Photo'">
+    </div>
+  </div>
+  <div class="md:absolute md:inset-0 flex items-end md:items-end">
+    <div class="w-full bg-gradient-to-t from-slate-900 via-slate-900/95 to-transparent md:bg-slate-900/0">
+      <div class="max-w-7xl mx-auto px-6 pb-10 pt-6 md:pt-0">
+        <h1 class="font-display italic text-4xl sm:text-5xl md:text-6xl text-amber-50 max-w-3xl">Piano Lessons &amp; Music Groups in Sechelt</h1>
+        <p class="text-amber-50/90 mt-4 max-w-xl text-base sm:text-lg">Learn piano at any age! Enjoy private 1-on-1 lessons for every skill level, plus fun, interactive music groups that spark a lifelong love of music for kids.</p>
+        <a href="#contact" class="inline-block mt-6 bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Book First Free Lesson</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-slate-700 text-amber-50 py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl flex items-center gap-3 mb-10">👋 About Me</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="images/janice.jpg" alt="Janice, piano teacher at Spruce Music" class="rounded-sm w-full max-w-sm mx-auto md:mx-0 object-cover aspect-square" onerror="this.src='https://placehold.co/600x600/3d4f61/e8e0c8?text=Janice'">
+      <div>
+        <p class="leading-relaxed text-amber-50/95">Welcome! I'm Janice, an internationally experienced elementary teacher, Ontario music specialist, and passionate believer in the joy of music at every age. For more than a decade, I've inspired students in Ontario, Bermuda, Kuwait, and now Sechelt, blending classical training with the creative, engaging Carl Orff approach. My lessons emphasize sequential skill-building, but are always filled with fun, movement, and music for the whole self. My philosophy? Every student—regardless of age or ability—can flourish with the right encouragement and personal support. My goal is to spark confidence and a lifelong love of music in every lesson!</p>
+        <p class="font-display text-xl mt-8 mb-4">First Lesson is Free!</p>
+        <a href="#contact" class="inline-block bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Book a Free Lesson</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes" class="bg-slate-50">
+  <div class="bg-slate-600 py-10 text-center">
+    <h2 class="font-display text-3xl md:text-4xl text-amber-50 flex items-center justify-center gap-3">🎵 Classes Offered</h2>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-8">
+    <div class="bg-slate-900 text-amber-50 flex flex-col">
+      <img src="images/class-piano.jpg" alt="Piano lesson" class="h-56 w-full object-cover" onerror="this.src='https://placehold.co/500x400/1e293b/e8e0c8?text=Piano+Lessons'">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-display text-2xl text-center mb-1">Piano Lessons</h3>
+        <p class="text-center text-sm text-amber-50/70 mb-4">(All Ages, All Levels)</p>
+        <p class="text-sm leading-relaxed flex-1">No experience necessary — beginners to advanced, children to adults! Personalized one-on-one lessons tailored to your learning style and favourite music. Classical foundations, pop, or anything in between. Strong emphasis on creativity, enjoyment, and skill development. First lesson is always FREE! 30 minutes for first term, then 40 minutes as needed. Join as a young musician, or return as an adult — everyone's welcome.</p>
+        <a href="#contact" class="mt-6 block text-center bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Book a Free Lesson</a>
+      </div>
+    </div>
+    <div class="bg-slate-900 text-amber-50 flex flex-col">
+      <img src="images/class-group.jpg" alt="Play, Move and Sing group" class="h-56 w-full object-cover" onerror="this.src='https://placehold.co/500x400/1e293b/e8e0c8?text=Play+Move+%26+Sing'">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-display text-2xl text-center mb-1">Play, Move and Sing Group</h3>
+        <p class="text-center text-sm text-amber-50/70 mb-4">(Ages 6-10, More Soon!)</p>
+        <p class="text-sm leading-relaxed flex-1">Welcome, young students ages 6-10! Explore music through the proven, playful Orff method: singing, speech, creative movement, dance. Learn percussion, xylophones, and rhythm in a fun group. Build strong musical concepts through games, play, and teamwork. Orff approach supports improved literacy and math in young learners. It's great for the brain — and so much fun! (More group ages coming soon — ask to join the waitlist!)</p>
+        <a href="#contact" class="mt-6 block text-center bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Contact Us</a>
+      </div>
+    </div>
+    <div class="bg-slate-900 text-amber-50 flex flex-col">
+      <img src="images/class-littlemozarts.jpg" alt="Little Mozarts program" class="h-56 w-full object-cover" onerror="this.src='https://placehold.co/500x400/1e293b/e8e0c8?text=Little+Mozarts'">
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-display text-2xl text-center mb-1">Little Mozarts</h3>
+        <p class="text-center text-sm text-amber-50/70 mb-4">(Ages 3-5)</p>
+        <p class="text-sm leading-relaxed flex-1">A joyful music program just for preschoolers (ages 3-5), attended with a parent/adult. Based on "Little Mozarts" for the youngest musicians. Meet Mozart Mouse & Beethoven Bear. Songs, stories, puppets, rhythm activities, creative movement. Explore instruments and visual music notation. Perfect for building early love for music — and leads naturally into piano!</p>
+        <a href="#contact" class="mt-6 block text-center bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="bg-slate-700 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-4">Why Choose Spruce Music?</h2>
+    <div class="w-14 border-t-2 border-amber-50/70 mb-6"></div>
+    <p class="leading-relaxed mb-4">At Spruce Music, every lesson is tailored to nurture a lifelong love of music in a supportive, joyful environment. With over 20 years of teaching experience, Janice is dedicated to helping children, beginners, and adults grow their musical abilities with encouragement and expertise. Whether you're learning piano, singing your first notes, or exploring music for the first time, you'll benefit from individualized attention and engaging lesson plans that make learning enjoyable and rewarding.</p>
+    <p class="leading-relaxed">Located in the heart of Sechelt, Spruce Music is more than just a studio, it's a welcoming space where every student is valued, progress is celebrated, and music becomes a meaningful part of everyday life. Plus, your first lesson is absolutely free, so you can experience the difference for yourself risk-free!</p>
+    <div class="text-center mt-10">
+      <a href="#contact" class="inline-block bg-amber-50 text-slate-800 font-semibold px-8 py-3 rounded-sm hover:bg-amber-100 transition">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="bg-slate-800 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-10">How It Works</h2>
+    <div class="divide-y divide-amber-50/20">
+      <div class="grid md:grid-cols-[auto_1fr_1.4fr] gap-4 items-start py-6">
+        <div class="h-10 w-10 rounded-full bg-slate-600 flex items-center justify-center font-semibold shrink-0">1</div>
+        <h3 class="font-medium md:pt-2">Get in Touch or Book a Free Intro Lesson</h3>
+        <p class="text-sm text-amber-50/80">Use the contact form or click "Get Started" to request your complimentary first lesson, ask questions, or discuss your goals.</p>
+      </div>
+      <div class="grid md:grid-cols-[auto_1fr_1.4fr] gap-4 items-start py-6">
+        <div class="h-10 w-10 rounded-full bg-slate-600 flex items-center justify-center font-semibold shrink-0">2</div>
+        <h3 class="font-medium md:pt-2">Meet Janice &amp; Explore Your Option</h3>
+        <p class="text-sm text-amber-50/80">We'll connect either in person at the studio or by phone/email—so I can learn about you (or your child's) musical interests, experience, and scheduling needs. I'll help you choose the best class: Private Piano Lessons, Play, Move, and Sing Group, or Little Mozarts.</p>
+      </div>
+      <div class="grid md:grid-cols-[auto_1fr_1.4fr] gap-4 items-start py-6">
+        <div class="h-10 w-10 rounded-full bg-slate-600 flex items-center justify-center font-semibold shrink-0">3</div>
+        <h3 class="font-medium md:pt-2">Start Learning &amp; Making Music</h3>
+        <p class="text-sm text-amber-50/80">Begin lessons in a welcoming, supportive environment! Whether you join a group or start private lessons, every session is tailored to your pace and interests. Parents are always welcome to ask questions or observe.</p>
+      </div>
+      <div class="grid md:grid-cols-[auto_1fr_1.4fr] gap-4 items-start py-6">
+        <div class="h-10 w-10 rounded-full bg-slate-600 flex items-center justify-center font-semibold shrink-0">4</div>
+        <h3 class="font-medium md:pt-2">Grow with Confidence &amp; Joy</h3>
+        <p class="text-sm text-amber-50/80">Watch as skills develop, creativity blossoms, and confidence grows! Lessons build step by step, and every milestone is celebrated. Moving up, trying a new group, or tackling a favorite song? I'll be there every note of the way.</p>
+      </div>
+    </div>
+    <a href="#contact" class="inline-block mt-4 bg-amber-50 text-slate-800 font-semibold px-6 py-3 rounded-sm hover:bg-amber-100 transition">Get Started</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-slate-800 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-10">Testimonials</h2>
+    <div class="divide-y divide-amber-50/20">
+      <div class="grid md:grid-cols-[150px_1fr] gap-4 py-6">
+        <p class="font-medium">Sarah L.</p>
+        <p class="italic text-amber-50/90">"The music groups have been a fantastic way for my child to explore and appreciate different styles of music."</p>
+      </div>
+      <div class="grid md:grid-cols-[150px_1fr] gap-4 py-6">
+        <p class="font-medium">Jane S.</p>
+        <p class="italic text-amber-50/90">"I was nervous to start as an adult, but Janice is so welcoming and was thrilled to help me finally learn piano!"</p>
+      </div>
+      <div class="grid md:grid-cols-[150px_1fr] gap-4 py-6">
+        <p class="font-medium">David B.</p>
+        <p class="italic text-amber-50/90">"My daughter started Little Mozarts at age four and now all she talks about is music! She wants to start learning piano now, Janice makes classes so much fun."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualifications" class="bg-slate-900 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-6">Qualifications</h2>
+    <p class="leading-relaxed">With an international career in music education, Janice brings decades of expertise to Spruce Music Studio in Sechelt. She is an Ontario-certified music specialist and accomplished elementary teacher with extensive experience teaching in Canada and abroad. Janice's unique approach blends classical training from the Royal Conservatory of Music in Toronto with the dynamic, creative Carl Orff method. Her background includes directing school bands, choirs, and musical productions, as well as years of service as a church organist and choir director in Ontario and Bermuda. Janice is passionate about structured, sequential musical growth—always delivered with joy, creativity, and encouragement for learners of all ages and abilities.</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="bg-slate-700 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-10">Experience</h2>
+    <div class="space-y-8">
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2024-2025</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Sunshine Coast, BC</p></div>
+        <p class="pt-1">SD46 Elementary On Call Teacher</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2019 - 2023</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Trillium Lakelands Board of Education, Ontario</p></div>
+        <p class="pt-1">Primary PE and health, Junior health, ESL tutoring, Junior and Intermediate Core French</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2008 - 2018</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Bermuda Ministry of Education, Bermuda</p></div>
+        <p class="pt-1">Primary &amp; Junior Music, French, Art, Mindfulness Project</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2006 - 2008</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Near North District School Board, Ontario</p></div>
+        <p class="pt-1">Primary &amp; Junior Music, Grade 2 Numeracy, Science</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2003 - 2006</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Peel District School Board, Ontario</p></div>
+        <p class="pt-1">Primary &amp; Junior Music</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">1999 - 2003</p><p class="text-sm text-amber-50/80">Teacher</p><p class="text-sm text-amber-50/80">Al Bayan Bilingual School, Kuwait</p></div>
+        <p class="pt-1">JK, SK ESL, Grade 2 Language, Numeracy, Science, Art, Private tuitions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="bg-slate-900 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl mb-10">Education</h2>
+    <div class="space-y-8">
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">2003</p><p class="text-sm text-amber-50/80">Michigan State University (Overseas)</p><p class="text-sm text-amber-50/80">M.A. Curriculum and Teaching &amp; teacher credential</p></div>
+        <p class="pt-1 text-sm leading-relaxed">This program provided international teachers the opportunity to complete a combined Master of Arts in Curriculum and Teaching with Michigan State teacher certification. The program sites were Thailand and France. Courses had a strong literacy focus as well as a focus on experiential learning. Two years of practicum were completed (for me in Kuwait) with an on-site teacher advisor and final certification under review of my mentor-prof from France. All in all, it was an amazing personal and professional experience!</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">1985</p><p class="text-sm text-amber-50/80">University of Western Ontario</p><p class="text-sm text-amber-50/80">B.Sc.N.</p></div>
+        <p class="pt-1 text-sm leading-relaxed">My Bachelor of Science in Nursing was completed in London, Ontario. It was a post-diploma program for experienced nurses and was focused on pre-medical and nursing science and arts. Completion of the program provided graduates with the ability to work in community nursing, management and other specialty areas.</p>
+      </div>
+      <div class="grid md:grid-cols-[220px_1fr] gap-2">
+        <div><p class="font-semibold">1980</p><p class="text-sm text-amber-50/80">Conestoga College, Guelph, Ontario</p><p class="text-sm text-amber-50/80">Registered Nurse Diploma</p></div>
+        <p class="pt-1 text-sm leading-relaxed">I completed my initial Registered Nurse diploma in Guelph, Ontario. It included nursing theory and science classes as well as the required practicum hours. And yes, I can make a bed that you can spin a quarter on! Those were the days when we all worked hard to obtain that desired black band on our caps! The diploma opened the door for me to work in critical care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL QUALIFICATIONS -->
+<section class="bg-slate-700 text-amber-50 py-16 px-6">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="font-display text-2xl md:text-3xl mb-6">Additional Qualifications</h2>
+      <ul class="list-disc list-inside space-y-2 text-sm leading-relaxed">
+        <li>Ontario Music Specialist - Orff Part 1 and 2 of 3 at Royal Conservatory, Toronto</li>
+        <li>Orff Jazz by Doug Goodkin, Royal Conservatory, Toronto</li>
+        <li>Director and Producer of School Musical Productions</li>
+        <li>French Part 1</li>
+        <li>Special Education, Part 1</li>
+        <li>Primary Math, Part 1</li>
+        <li>Computers in the Classroom, Part 1</li>
+        <li>Intermediate (Science-Biology)</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl md:text-3xl mb-6">Languages</h2>
+      <ul class="list-disc list-inside space-y-2 text-sm leading-relaxed">
+        <li>English (native)</li>
+        <li>French - Neurolinguistic Approach to FSL – UWO, Trois-Pistoles, QC</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative bg-slate-900 text-amber-50 py-16 px-6">
+  <div class="absolute inset-0 opacity-20">
+    <img src="images/hero-piano.jpg" alt="" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1600x900/1e293b/1e293b?text=+'">
+  </div>
+  <div class="relative max-w-xl mx-auto bg-slate-900/95 border border-amber-50/10 p-8 sm:p-10">
+    <h2 class="font-display text-3xl text-center mb-4">Contact Us</h2>
+    <p class="text-center text-sm text-amber-50/80 mb-8">Ready to start? Janice will personally reach out to help you find the perfect lesson or group. Please fill out the form below and she'll be in touch soon!</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form" class="space-y-5">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <div>
+        <label for="first-name" class="block text-sm mb-1">First Name</label>
+        <input id="first-name" name="First Name" type="text" class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50">
+      </div>
+      <div>
+        <label for="last-name" class="block text-sm mb-1">Last Name</label>
+        <input id="last-name" name="Last Name" type="text" class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50">
+      </div>
+      <div>
+        <label for="email" class="block text-sm mb-1">Email *</label>
+        <input id="email" name="email" type="email" required class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50">
+      </div>
+      <div>
+        <label for="student-age" class="block text-sm mb-1">Students Age *</label>
+        <input id="student-age" name="Student's Age" type="text" required class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50">
+      </div>
+      <div>
+        <label for="phone" class="block text-sm mb-1">Phone Number</label>
+        <input id="phone" name="Phone Number" type="tel" class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50">
+      </div>
+      <div>
+        <label for="program" class="block text-sm mb-1">Which program are you interested in?</label>
+        <select id="program" name="Program" class="w-full bg-amber-50 text-slate-800 px-3 py-2 focus:outline-none">
+          <option value="">Choose an option</option>
+          <option>Piano Lessons</option>
+          <option>Play, Move and Sing Group</option>
+          <option>Little Mozarts</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div>
+        <label for="message" class="block text-sm mb-1">Tell me about you, or your childs musical level, goals, or ask any questions.</label>
+        <textarea id="message" name="Message" rows="4" class="w-full bg-slate-900 border border-amber-50/40 px-3 py-2 focus:outline-none focus:border-amber-50"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-amber-50 text-slate-800 font-semibold px-6 py-3 hover:bg-amber-100 transition">Submit</button>
+      <p id="form-status" class="text-sm text-center hidden"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-amber-50 px-6 py-12">
+  <div class="max-w-6xl mx-auto border-t border-amber-50/20 pt-10 flex flex-col md:flex-row md:justify-between gap-8">
+    <div class="flex items-center gap-2">
+      <img src="images/logo.png" alt="Spruce Music logo" class="h-14 w-auto" onerror="this.style.display='none'">
+      <span class="font-display text-2xl text-teal-400">Spruce Music</span>
+    </div>
+    <div class="text-sm space-y-1">
+      <p>705-349-8558</p>
+      <p><a href="mailto:janicew7@gmail.com" class="hover:underline">janicew7@gmail.com</a></p>
+      <p class="pt-2">5592 Curtis Pl, Sechelt, BC V7Z 0R9</p>
+      <a href="#" class="underline text-amber-50/70 hover:text-amber-50">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto text-right text-xs text-amber-50/50 mt-8">© 2025 by Riley @ Coastline Flow.</div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  function encode(data) {
+    return Object.keys(data).map(function (key) {
+      return encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+    }).join("&");
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = {};
+    new FormData(form).forEach(function (value, key) { data[key] = value; });
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(data)
+    }).then(function () {
+      status.classList.remove('hidden');
+      status.textContent = "Thanks! Janice will be in touch soon.";
+      form.reset();
+    }).catch(function () {
+      status.classList.remove('hidden');
+      status.textContent = "Something went wrong — please email janicew7@gmail.com directly.";
+    });
+  });
+</script>
+
+</body>
+</html>
