@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spruce Music | Piano Lessons & Music Groups in Sechelt</title>
 <meta name="description" content="Private piano lessons and interactive music groups for all ages in Sechelt, BC. First lesson free!">
+<link rel="icon" type="image/png" href="images/logo.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600;1,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -347,10 +348,10 @@
       <p>705-349-8558</p>
       <p><a href="mailto:janicew7@gmail.com" class="hover:underline">janicew7@gmail.com</a></p>
       <p class="pt-2">5592 Curtis Pl, Sechelt, BC V7Z 0R9</p>
-      <a href="#" class="underline text-amber-50/70 hover:text-amber-50">Privacy Policy</a>
+      <a href="privacy-policy.html" class="underline text-amber-50/70 hover:text-amber-50">Privacy Policy</a>
     </div>
   </div>
-  <div class="max-w-6xl mx-auto text-right text-xs text-amber-50/50 mt-8">© 2025 by Riley @ Coastline Flow.</div>
+  <div class="max-w-6xl mx-auto text-right text-xs text-amber-50/50 mt-8">© <span id="year"></span> by Riley @ Coastline Flow.</div>
 </footer>
 
 <script>
@@ -368,6 +369,8 @@
   }
   window.addEventListener('scroll', updateHeaderBg);
   updateHeaderBg();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 
   var form = document.getElementById('contact-form');
   var errorMsg = document.getElementById('form-error');
